@@ -1,8 +1,167 @@
-Instruction: Sum sales in E2:E100 where region is "North" in B2:B100
-Formula: =SUMIF(B2:B100,"North",E2:E100)<EOS>
+Instruction: Sum the sales in E2:E100 where the region in B2:B100 is "North"
+Formula: =SUMIF(B2:B100,"North",E2:E100)
 
-Instruction: Count values in D2:D100 greater than 1000
-Formula: =COUNTIF(D2:D100,">1000")<EOS>
+Instruction: Sum all values in D2:D100 where the category in C2:C100 is "Hardware"
+Formula: =SUMIF(C2:C100,"Hardware",D2:D100)
 
-Instruction: If B2 is "West", show C2, otherwise empty
-Formula: =IF(B2="West",C2,"")<EOS>
+Instruction: Add up the amounts in F2:F200 only for rows where the status in G2:G200 is "Paid"
+Formula: =SUMIF(G2:G200,"Paid",F2:F200)
+
+Instruction: Calculate the total revenue in H2:H500 for the product "Laptop" listed in E2:E500
+Formula: =SUMIF(E2:E500,"Laptop",H2:H500)
+
+Instruction: Sum the values in C2:C100 where the month in B2:B100 is "January"
+Formula: =SUMIF(B2:B100,"January",C2:C100)
+
+Instruction: Count how many values in D2:D100 are greater than 1000
+Formula: =COUNTIF(D2:D100,">1000")
+
+Instruction: Count cells in B2:B200 that are equal to "Completed"
+Formula: =COUNTIF(B2:B200,"Completed")
+
+Instruction: Count how many orders in F2:F300 are marked as "Cancelled"
+Formula: =COUNTIF(F2:F300,"Cancelled")
+
+Instruction: Count how many cells in C2:C100 are not empty
+Formula: =COUNTIF(C2:C100,"<>")
+
+Instruction: Count the number of dates in A2:A365 that are after 01-01-2025
+Formula: =COUNTIF(A2:A365,">"&DATE(2025,1,1))
+
+Instruction: Calculate the average of values in E2:E100 where the region in D2:D100 is "West"
+Formula: =AVERAGEIF(D2:D100,"West",E2:E100)
+
+Instruction: Get the average score in C2:C50 for students whose class in B2:B50 is "A"
+Formula: =AVERAGEIF(B2:B50,"A",C2:C50)
+
+Instruction: Find the average of F2:F200 where the status in G2:G200 is "Closed"
+Formula: =AVERAGEIF(G2:G200,"Closed",F2:F200)
+
+Instruction: Return the average of H2:H150 for rows where the department in E2:E150 is "Sales"
+Formula: =AVERAGEIF(E2:E150,"Sales",H2:H150)
+
+Instruction: Calculate the average price in D2:D100 where the product type in C2:C100 is "Premium"
+Formula: =AVERAGEIF(C2:C100,"Premium",D2:D100)
+
+Instruction: If B2 is "West", return C2; otherwise return an empty string
+Formula: =IF(B2="West",C2,"")
+
+Instruction: If the value in D2 is greater than 500, show "High", otherwise show "Low"
+Formula: =IF(D2>500,"High","Low")
+
+Instruction: If E2 is blank, show "Missing", otherwise show E2
+Formula: =IF(E2="","Missing",E2)
+
+Instruction: If F2 is "Approved" and G2 is "Paid", show "Complete", otherwise show "Pending"
+Formula: =IF(AND(F2="Approved",G2="Paid"),"Complete","Pending")
+
+Instruction: If C2 is greater than 100 and D2 is less than 50, return "Flag", otherwise ""
+Formula: =IF(AND(C2>100,D2<50),"Flag","")
+
+Instruction: Look up the value in D2 in the first column of A2:C100 and return the third column
+Formula: =VLOOKUP(D2,A2:C100,3,FALSE)
+
+Instruction: Use VLOOKUP to find the price for product in F2 using the table B2:D200, returning the second column
+Formula: =VLOOKUP(F2,B2:D200,2,FALSE)
+
+Instruction: Look up the employee ID in A2 within the table E2:G500 and return the third column
+Formula: =VLOOKUP(A2,E2:G500,3,FALSE)
+
+Instruction: Find the department for the name in B2 using the lookup table H2:J100
+Formula: =VLOOKUP(B2,H2:J100,2,FALSE)
+
+Instruction: Use VLOOKUP to get the discount rate for code in C2 from lookup table K2:L50
+Formula: =VLOOKUP(C2,K2:L50,2,FALSE)
+
+Instruction: Use XLOOKUP to find the value in D2 within A2:A100 and return the corresponding value from B2:B100
+Formula: =XLOOKUP(D2,A2:A100,B2:B100)
+
+Instruction: Use XLOOKUP to return the price for product in F2 from table Products!A2:A500 and Products!C2:C500
+Formula: =XLOOKUP(F2,Products!A2:Products!A500,Products!C2:Products!C500)<EOS>
+
+Instruction: Find the email address for the username in B2 using XLOOKUP on table E2:E200 and F2:F200
+Formula: =XLOOKUP(B2,E2:E200,F2:F200)
+
+Instruction: Use XLOOKUP to get the region for store ID in A2 from Stores!A2:A300 and Stores!B2:B300
+Formula: =XLOOKUP(A2,Stores!A2:Stores!A300,Stores!B2:Stores!B300)
+
+Instruction: Use XLOOKUP to find the order date for order ID in C2 in Orders!A2:A1000 and Orders!B2:B1000
+Formula: =XLOOKUP(C2,Orders!A2:Orders!A1000,Orders!B2:Orders!B1000)
+
+Instruction: Filter the values in E2:E100 to only show rows where the region in B2:B100 is "North"
+Formula: =FILTER(E2:E100,B2:B100="North")
+
+Instruction: Filter rows B2:F200 to only show entries where status in F2:F200 is "Open"
+Formula: =FILTER(B2:F200,F2:F200="Open")
+
+Instruction: Return all rows from A2:D500 where the amount in D2:D500 is greater than 1000
+Formula: =FILTER(A2:D500,D2:D500>1000)
+
+Instruction: Filter the table A2:G300 to only show rows where the department in C2:C300 is "HR"
+Formula: =FILTER(A2:G300,C2:C300="HR")
+
+Instruction: Filter values in H2:H200 where the date in A2:A200 is after 01-01-2025
+Formula: =FILTER(H2:H200,A2:A200>DATE(2025,1,1))
+
+Instruction: Get a unique list of regions from B2:B500
+Formula: =UNIQUE(B2:B500)
+
+Instruction: Return a unique list of product names from C2:C100
+Formula: =UNIQUE(C2:C100)
+
+Instruction: Get a unique list of customer IDs from A2:A1000, ignoring blanks
+Formula: =UNIQUE(FILTER(A2:A1000,A2:A1000<>""))
+
+Instruction: Return unique values from the combined range B2:B100 and C2:C100
+Formula: =UNIQUE(CHOOSE({1,2},B2:B100,C2:C100))
+
+Instruction: Get a unique sorted list of cities from D2:D300
+Formula: =SORT(UNIQUE(D2:D300))
+
+Instruction: Return the maximum value in D2:D100 where the region in B2:B100 is "East"
+Formula: =MAXIFS(D2:D100,B2:B100,"East")
+
+Instruction: Find the minimum value in F2:F200 where the status in G2:G200 is "Active"
+Formula: =MINIFS(F2:F200,G2:G200,"Active")
+
+Instruction: Get the maximum sales in E2:E500 for product "Shoes" listed in C2:C500
+Formula: =MAXIFS(E2:E500,C2:C500,"Shoes")
+
+Instruction: Return the minimum order value in H2:H400 where the country in D2:D400 is "UK"
+Formula: =MINIFS(H2:H400,D2:D400,"UK")
+
+Instruction: Find the largest quantity in G2:G300 where the category in E2:E300 is "Office"
+Formula: =MAXIFS(G2:G300,E2:E300,"Office")
+
+Instruction: Join first name in A2 and last name in B2 with a space in between
+Formula: =A2&" "&B2
+
+Instruction: Extract the first three characters from C2
+Formula: =LEFT(C2,3)
+
+Instruction: Take the last four characters from D2
+Formula: =RIGHT(D2,4)
+
+Instruction: Extract five characters from text in E2 starting at position 3
+Formula: =MID(E2,3,5)
+
+Instruction: Round the value in F2 to two decimal places
+Formula: =ROUND(F2,2)
+
+Instruction: If the formula in G2 results in an error, return 0, otherwise show the result
+Formula: =IFERROR(G2,0)
+
+Instruction: Combine city in C2 and country in D2 separated by a comma and a space
+Formula: =C2&", "&D2
+
+Instruction: Create a date from year in A2, month in B2, and day in C2
+Formula: =DATE(A2,B2,C2)
+
+Instruction: Format the date in A2 as "dd-mm-yyyy" using TEXT
+Formula: =TEXT(A2,"dd-mm-yyyy")
+
+Instruction: Count rows in A2:A100 where both region in B2:B100 is "North" and status in C2:C100 is "Open"
+Formula: =COUNTIFS(B2:B100,"North",C2:C100,"Open")
+
+Instruction: Sum values in E2:E200 where region in B2:B200 is "South" and category in C2:C200 is "Retail"
+Formula: =SUMIFS(E2:E200,B2:B200,"South",C2:C200,"Retail")
