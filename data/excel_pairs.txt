@@ -1,0 +1,8 @@
+Instruction: Sum sales in E2:E100 where region is "North" in B2:B100
+Formula: =SUMIF(B2:B100,"North",E2:E100)<EOS>
+
+Instruction: Count values in D2:D100 greater than 1000
+Formula: =COUNTIF(D2:D100,">1000")<EOS>
+
+Instruction: If B2 is "West", show C2, otherwise empty
+Formula: =IF(B2="West",C2,"")<EOS>
